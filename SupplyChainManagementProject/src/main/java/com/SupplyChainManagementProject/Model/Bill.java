@@ -1,17 +1,30 @@
 package com.SupplyChainManagementProject.Model;
 
-public class Bill {
+import java.util.Date;
+
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class Bill implements GenericModel<Bill>{
 	private int billId;
 	private double totalAmount;
+	private Date billDate;
 	private int productId;
 	private int supplierId;
 	public Bill() {
 		super();
 	}
-	public Bill(int billId, double totalAmount, int productId, int supplierId) {
+	public Bill(double totalAmount, Date billDate, int productId, int supplierId) {
+		super();
+		this.totalAmount = totalAmount;
+		this.billDate = billDate;
+		this.productId = productId;
+		this.supplierId = supplierId;
+	}
+	public Bill(int billId, double totalAmount, Date billDate, int productId, int supplierId) {
 		super();
 		this.billId = billId;
 		this.totalAmount = totalAmount;
+		this.billDate = billDate;
 		this.productId = productId;
 		this.supplierId = supplierId;
 	}
@@ -38,5 +51,11 @@ public class Bill {
 	}
 	public void setSupplierId(int supplierId) {
 		this.supplierId = supplierId;
+	}
+	public Date getBillDate() {
+		return billDate;
+	}
+	public void setBillDate(Date billDate) {
+		this.billDate = billDate;
 	}
 }

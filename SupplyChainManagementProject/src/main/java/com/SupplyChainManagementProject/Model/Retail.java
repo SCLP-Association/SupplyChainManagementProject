@@ -1,13 +1,20 @@
 package com.SupplyChainManagementProject.Model;
 
-public class Retail {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class Retail implements GenericModel<Retail>{
     private int retailId;
     private String retailInfo;
-    private String userId;
+    private int userId;
 	public Retail() {
 		super();
 	}
-	public Retail(int retailId, String retailInfo, String userId) {
+	public Retail(String retailInfo, int userId) {
+		super();
+		this.retailInfo = retailInfo;
+		this.userId = userId;
+	}
+	public Retail(int retailId, String retailInfo, int userId) {
 		super();
 		this.retailId = retailId;
 		this.retailInfo = retailInfo;
@@ -25,10 +32,10 @@ public class Retail {
 	public void setRetailInfo(String retailInfo) {
 		this.retailInfo = retailInfo;
 	}
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 }

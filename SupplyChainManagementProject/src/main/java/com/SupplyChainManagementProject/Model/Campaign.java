@@ -1,12 +1,20 @@
 package com.SupplyChainManagementProject.Model;
 
-public class Campaign {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class Campaign implements GenericModel<Campaign>{
 	private int campaignId;
 	private String campaignName;
 	private double discountOnPercent;
 	private double discountOnMoney;
 	public Campaign() {
 		super();
+	}
+	public Campaign(String campaignName, double discountOnPercent, double discountOnMoney) {
+		super();
+		this.campaignName = campaignName;
+		this.discountOnPercent = discountOnPercent;
+		this.discountOnMoney = discountOnMoney;
 	}
 	public Campaign(int campaignId, String campaignName, double discountOnPercent, double discountOnMoney) {
 		super();

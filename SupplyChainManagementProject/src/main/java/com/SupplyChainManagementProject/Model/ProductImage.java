@@ -1,16 +1,26 @@
 package com.SupplyChainManagementProject.Model;
 
-public class ProductImage {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class ProductImage implements GenericModel<ProductImage>{
 	private int productImageId;
 	private String image;
+	private int position;
 	private int productId;
 	public ProductImage() {
 		super();
 	}
-	public ProductImage(int productImageId, String image, int productId) {
+	public ProductImage(String image, int position, int productId) {
+		super();
+		this.image = image;
+		this.position = position;
+		this.productId = productId;
+	}
+	public ProductImage(int productImageId, String image, int position, int productId) {
 		super();
 		this.productImageId = productImageId;
 		this.image = image;
+		this.position = position;
 		this.productId = productId;
 	}
 	public int getProductImageId() {
@@ -30,6 +40,12 @@ public class ProductImage {
 	}
 	public void setProductId(int productId) {
 		this.productId = productId;
+	}
+	public int getPosition() {
+		return position;
+	}
+	public void setPosition(int position) {
+		this.position = position;
 	}
 
 }

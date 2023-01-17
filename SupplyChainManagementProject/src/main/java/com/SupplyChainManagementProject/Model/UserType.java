@@ -1,10 +1,16 @@
 package com.SupplyChainManagementProject.Model;
 
-public class UserType {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class UserType implements GenericModel<UserType>{
 	private int userTypeId;
 	private String definition;
 	public UserType() {
 		super();
+	}
+	public UserType(String definition) {
+		super();
+		this.definition = definition;
 	}
 	public UserType(int userTypeId, String definition) {
 		super();

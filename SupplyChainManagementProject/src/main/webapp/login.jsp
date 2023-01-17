@@ -1,5 +1,12 @@
+
+<%@ page import="com.SupplyChainManagementProject.Model.User" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <% User auth= (user) request.getSession().getAttribute("auth"); 
+	if(auth!=null){
+		response.sendRedirect("index.jsp");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>

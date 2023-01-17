@@ -1,6 +1,8 @@
 package com.SupplyChainManagementProject.Model;
 
-public class User {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class User implements GenericModel<User>{
     private int userId;
     private String name;
     private String email;
@@ -9,6 +11,13 @@ public class User {
     
 	public User() {
 		super();
+	}
+	public User(String name, String email, String password, String phoneNumber) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.phoneNumber = phoneNumber;
 	}
 	public User(int userId, String name, String email, String password, String phoneNumber) {
 		super();

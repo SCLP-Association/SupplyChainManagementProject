@@ -1,13 +1,20 @@
 package com.SupplyChainManagementProject.Model;
 
-public class Supplier {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class Supplier implements GenericModel<Supplier>{
     private int supplierId;
     private String companyName;
-    private String userId;
+    private int userId;
 	public Supplier() {
 		super();
 	}
-	public Supplier(int supplierId, String companyName, String userId) {
+	public Supplier(String companyName, int userId) {
+		super();
+		this.companyName = companyName;
+		this.userId = userId;
+	}
+	public Supplier(int supplierId, String companyName, int userId) {
 		super();
 		this.supplierId = supplierId;
 		this.companyName = companyName;
@@ -25,10 +32,10 @@ public class Supplier {
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
 	}
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 }

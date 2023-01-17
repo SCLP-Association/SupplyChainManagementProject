@@ -1,6 +1,8 @@
 package com.SupplyChainManagementProject.Model;
 
-public class UserUserType {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class UserUserType implements GenericModel<UserUserType>{
 	private int userUserTypeId;
 	private int userId;
 	private int userTypeId;

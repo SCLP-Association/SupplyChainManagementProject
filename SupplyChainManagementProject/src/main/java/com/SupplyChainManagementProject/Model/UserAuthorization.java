@@ -1,6 +1,8 @@
 package com.SupplyChainManagementProject.Model;
 
-public class UserAuthorization {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class UserAuthorization implements GenericModel<UserAuthorization>{
 	private int userAuthorizationId;
 	private int operationAuthorizationId;
 	private int userTypeId;

@@ -1,6 +1,8 @@
 package com.SupplyChainManagementProject.Model;
 
-public class Discount {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class Discount implements GenericModel<Discount>{
 	private int discountId;
 	private double discountOnPercent;
 	private double discountOnMoney;
@@ -8,6 +10,13 @@ public class Discount {
 	private int supplierId;
 	public Discount() {
 		super();
+	}
+	public Discount(double discountOnPercent, double discountOnMoney, int retailId, int supplierId) {
+		super();
+		this.discountOnPercent = discountOnPercent;
+		this.discountOnMoney = discountOnMoney;
+		this.retailId = retailId;
+		this.supplierId = supplierId;
 	}
 	public Discount(int discountId, double discountOnPercent, double discountOnMoney, int retailId, int supplierId) {
 		super();

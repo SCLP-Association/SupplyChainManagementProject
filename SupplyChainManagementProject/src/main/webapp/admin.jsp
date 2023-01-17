@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@include file="includes/head.jsp" %>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-Merhaba
-<%@include file="includes/footer.jsp" %>
+
 </body>
 </html>

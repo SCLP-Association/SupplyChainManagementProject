@@ -1,21 +1,34 @@
 package com.SupplyChainManagementProject.Model;
 
-public class Product {
+import com.SupplyChainManagementProject.Core.Model.GenericModel;
+
+public class Product implements GenericModel<Product>{
 	private int productId;
 	private String productName;
-	private String quantity;
-	private String price;
+	private double quantity;
+	private double price;
 	private String explanation;
+	private boolean status;
 	public Product() {
 		super();
 	}
-	public Product(int productId, String productName, String quantity, String price, String explanation) {
+	public Product(String productName, double quantity, double price, String explanation, boolean status) {
+		super();
+		this.productName = productName;
+		this.quantity = quantity;
+		this.price = price;
+		this.explanation = explanation;
+		this.status = status;
+	}
+	public Product(int productId, String productName, double quantity, double price, String explanation,
+			boolean status) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
 		this.quantity = quantity;
 		this.price = price;
 		this.explanation = explanation;
+		this.status = status;
 	}
 	public int getProductId() {
 		return productId;
@@ -29,16 +42,16 @@ public class Product {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public String getQuantity() {
+	public double getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(String quantity) {
+	public void setQuantity(double quantity) {
 		this.quantity = quantity;
 	}
-	public String getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	public String getExplanation() {
@@ -46,6 +59,12 @@ public class Product {
 	}
 	public void setExplanation(String explanation) {
 		this.explanation = explanation;
+	}
+	public boolean isStatus() {
+		return status;
+	}
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 	
 }
